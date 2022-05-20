@@ -6,9 +6,9 @@ let minutoHtml = document.getElementById("minuto");
 let segundoHtml = document.getElementById("segundo");
 let miliSHtml = document.getElementById("miliS");
 
-let cron;
+let cron="";
 
-function returnData(numero) {
+function mostrarNumero(numero) {
   return numero > 10 ? numero : `0${numero}`;
 }
 
@@ -25,9 +25,9 @@ function contar() {
     minuto = 0;
   }
 
-  minutoHtml.innerText = returnData(minuto);
-  segundoHtml.innerText = returnData(segundo);
-  miliSHtml.innerText = returnData(miliS);
+  minutoHtml.innerText = mostrarNumero(minuto);
+  segundoHtml.innerText = mostrarNumero(segundo);
+  miliSHtml.innerText = mostrarNumero(miliS);
 }
 
 function inicio() {
@@ -50,9 +50,7 @@ function limpar() {
         minutoHtml.innerText = "00";
         segundoHtml.innerText = "00";
         miliSHtml.innerText = "000";
-        
-
-    }, 1000)
+        }, 20)
     
 
 }
